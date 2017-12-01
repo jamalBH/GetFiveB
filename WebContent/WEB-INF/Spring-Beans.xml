@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+<bean id="reservationMetier" class="com.E_hotel.metier.ReservationMetier"></bean>
+
+<bean id="restring" class="service.RetString"></bean>
+<bean id="tokenmanager" class="service.TokenManager"></bean>
+
+<bean id="metierclient" class="com.E_hotel.metier.ClientMetier"></bean>
+
+
+<bean id="client" class="com.E_hotel.dao.entites.Client"></bean>
+<bean id="reservation" class="com.E_hotel.dao.entites.Reservation"></bean>
+
+<bean id="clientdao" class="com.E_hotel.dao.implementation.ImpdaoClient"></bean>
+<bean id="reservationdao" class="com.E_hotel.dao.implementation.ImpdaoReservation"></bean>
+
+<bean id="commandeMetier" class="com.E_hotel.metier.CommandeMetier"></bean>
+
+<bean id="compteMetier" class="com.E_hotel.metier.CompteMetier"></bean>
+
+<bean id="commandedao" class="com.E_hotel.dao.implementation.ImpdaoCommande"/>
+<bean id="ligne_commande" class="com.E_hotel.dao.implementation.ImpdaoLigne_commande"/>
+
+
+
+<bean id="article" class="com.E_hotel.dao.entites.Article"/>
+<bean id="articledao" class="com.E_hotel.dao.implementation.ImpdaoArticle"/>
+<bean id="artmetier" class="com.E_hotel.metier.ArticleMetier"/>
+
+<bean id="userroledao" class="com.E_hotel.dao.implementation.ImpdaoUserRole"></bean>
+<bean id="userrole" class="com.E_hotel.dao.entites.UserRole"></bean>
+
+<bean id="userDao" class="com.E_hotel.dao.implementation.ImpdaoUser"/>
+<bean id="myUserDetailsService" class="service.MyUserDetailsService"/>
+
+<bean id="articleCategorie" class="com.E_hotel.dao.entites.Article_categorie"/>
+<bean id="articleCategoriedao" class="com.E_hotel.dao.implementation.ImpdaoArticleCategorie"/>
+<bean id="artcatmetier" class="com.E_hotel.metier.ArticleCategorieMetier"/>
+
+<bean id="menu" class="com.E_hotel.dao.entites.Menu"></bean>
+<bean id="menudao" class="com.E_hotel.dao.implementation.ImpdaoMenu"></bean>
+<bean id="menumetier" class="com.E_hotel.metier.MenuMetier"></bean>
+<bean id="chambreCatMetier" class="com.E_hotel.metier.ChambreCategorieMetier"></bean>
+
+<bean id="user" class="com.E_hotel.dao.entites.User"></bean>
+<bean id="usermetier" class="com.E_hotel.metier.UserMetier"></bean>
+
+
+<!-- <bean id="controllerprofile" class="com.E_hotel.controller.ProfileController"></bean> -->
+ 
+<bean id="daohotel" class="com.E_hotel.dao.implementation.ImpdaoHotel">    
+</bean>  
+
+<bean id="daoCategorie" class="com.E_hotel.dao.implementation.ImpdaoChambre_categorie">    
+</bean> 
+
+<bean id="daoChambre" class="com.E_hotel.dao.implementation.ImpdaoChambre">    
+</bean> 
+
+<bean id="test" class="com.E_hotel.metier.HotelMetier"> 
+</bean>  
+
+<bean id="chambreMetier" class="com.E_hotel.metier.ChambreMetier"> 
+</bean>
+
+<bean id="chambre" class="com.E_hotel.dao.entites.Chambre"> 
+</bean>
+
+<bean id="userRole" class="com.E_hotel.dao.entites.UserRole"> 
+</bean>
+
+<bean id="hotel" class="com.E_hotel.dao.entites.Hotel"> 
+</bean>
+ 
+ <bean id="chambre_categorie" class="com.E_hotel.dao.entites.Chambre_categorie"> 
+</bean>
+
+
+<!--<bean id="test2" class="com.E_hotel.form.HotelForm"> 
+<property name="sf" ref="sessionfactory"></property>   
+</bean>  
+
+<bean id="daochambre" class="com.E_hotel.dao.implementation.ImpdaoChambre"> 
+<property name="sf" ref="sessionfactory"></property>   
+</bean>  
+
+<bean id="daocategorie" class="com.E_hotel.dao.implementation.ImpdaoChambre_categorie"> 
+<property name="sf" ref="sessionfactory"></property>   
+</bean>  
+
+<bean id="sessionfactory" class="com.E_hotel.util.Session_factory">  </bean> 
+-->
+</beans>

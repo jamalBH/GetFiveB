@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/soutnance</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hbm2ddl.auto">update</property>  
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+       
+         <mapping class="com.E_hotel.dao.entites.Commande"/>
+         <mapping class="com.E_hotel.dao.entites.Ligne_Commande"/>
+               
+        <mapping class="com.E_hotel.dao.entites.Reservation"/>
+        <mapping class="com.E_hotel.dao.entites.Client"/> 
+        <mapping class="com.E_hotel.dao.entites.Hotel"/> 
+        <mapping class="com.E_hotel.dao.entites.Chambre"/>
+        <mapping class="com.E_hotel.dao.entites.Chambre_categorie"/>
+        <mapping class="com.E_hotel.dao.entites.Menu"/>
+        <mapping class="com.E_hotel.dao.entites.Article"/>
+        <mapping class="com.E_hotel.dao.entites.Article_categorie"/>
+        <mapping class="com.E_hotel.dao.entites.User"/>
+        <mapping class="com.E_hotel.dao.entites.UserRole"/>
+        
+    </session-factory>
+</hibernate-configuration>
